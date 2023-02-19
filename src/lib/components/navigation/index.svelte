@@ -23,7 +23,7 @@
 			</a>
 		</div>
 
-		<!-- Navigation -->
+		<!-- Links -->
 		<div class="flex hidden h-full items-center justify-center gap-10 md:flex lg:w-1/2">
 			{#each links as link}
 				<div
