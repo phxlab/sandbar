@@ -1,2 +1,9 @@
-<h1 class="text-red-700">Sandbar Mechanical</h1>
-<p>Initial project setup</p>
+<script>
+	import { Header, Services } from '$lib/blocks/home';
+</script>
+
+<Header />
+
+<Services />
+
+<div class="pb-[1000px]" />
