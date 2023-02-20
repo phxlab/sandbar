@@ -30,3 +30,9 @@
         --swiper-pagination-bullet-inactive-color: theme('colors.primary.500');
     }
 }
+
+
+::selection {
+    background: #a07dca;
+    color: #FFF;
+}
