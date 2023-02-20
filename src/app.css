@@ -23,3 +23,10 @@
         @apply text-base text-grey-900
     }
 }
+
+@layer components {
+    :root {
+        --swiper-pagination-color: theme('colors.primary.500');
+        --swiper-pagination-bullet-inactive-color: theme('colors.primary.500');
+    }
+}
