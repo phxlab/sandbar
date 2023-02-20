@@ -1,9 +1,16 @@
 <script>
-	import { Header, Services } from '$lib/blocks/home';
+	import { About, Header, Services } from '$lib/blocks/home';
+
+	export let data;
 </script>
 
-<Header />
+<svelte:head>
+	<title>{data.seo.title}</title>
+	<meta name="description" content={data.seo.description} />
+</svelte:head>
 
-<Services />
+<Header data={data.header} />
 
-<div class="pb-[1000px]" />
+<Services data={data.services} />
+
+<About data={data.about} />
