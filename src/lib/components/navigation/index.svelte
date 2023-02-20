@@ -2,6 +2,7 @@
 	import { Hamburger } from 'svelte-hamburgers';
 	import { page } from '$app/stores';
 	import { Container, imageHandler } from '$lib';
+	import { onMount } from 'svelte';
 
 	const links = [
 		{ href: '/', title: 'Home' },
@@ -11,10 +12,41 @@
 		{ href: '/contact', title: 'Contact' },
 	];
 
+	// Bindings
+	let activeNode;
+	let navNode;
+
+	// Store
+	let activeX;
+	let navSize = navNode?.offsetWidth;
+
+	// Sate
+	let resize = false;
 	let open;
+
+	const handleResize = () => {
+		resize = true;
+		activeX = activeNode?.getBoundingClientRect().x;
+		setTimeout(() => {
+			resize = false;
+		}, 100);
+	};
+
+	$: navSize, handleResize();
+	$: activeNode, (activeX = activeNode?.getBoundingClientRect().x);
+
+	onMount(() => {
+		const resizeObserver = new ResizeObserver(() => {
+			navSize = navNode?.offsetWidth;
+		});
+
+		resizeObserver.observe(navNode);
+
+		return () => resizeObserver.unobserve(navNode);
+	});
 </script>
 
-<nav class="h-14 w-full md:h-20">
+<nav bind:this={navNode} class="relative h-14 w-full md:h-20">
 	<Container class="flex h-full items-center justify-between">
 		<!-- Logo -->
 		<div class="lg:w-1/4">
@@ -26,19 +58,16 @@
 		<!-- Links -->
 		<div class="flex hidden h-full items-center justify-center gap-10 md:flex lg:w-1/2">
 			{#each links as link}
-				<div
-					class={`${
-						$page.url.pathname === link.href && 'active '
-					}relative flex h-full items-center`}
-				>
-					<a
-						href={link.href}
-						class={`${
-							$page.url.pathname === link.href ? 'text-primary-500' : 'hover:text-primary-500'
-						}`}
-					>
-						{link.title}
-					</a>
+				<div class="flex h-full items-center">
+					{#if $page.url.pathname === link.href}
+						<a href={link.href} bind:this={activeNode} class="text-primary-500">
+							{link.title}
+						</a>
+					{:else}
+						<a href={link.href} class="hover:text-primary-500">
+							{link.title}
+						</a>
+					{/if}
 				</div>
 			{/each}
 		</div>
@@ -73,17 +102,28 @@
 		<div class="md:hidden">
 			<Hamburger --color="#633B92" bind:open />
 		</div>
+
+		<div
+			class={`active ${resize && 'noTransition'}`}
+			style={`
+				position: absolute;
+				width: ${activeNode?.offsetWidth}px;
+				height: 4px;
+				left: ${activeX}px;
+				transition: 0.5s ease;
+				bottom: 0;
+				border-radius: 4px;
+			`}
+		/>
 	</Container>
 </nav>
 
 <style lang="postcss">
-	.active::after {
-		content: '';
-		position: absolute;
-		bottom: 0;
-		border-radius: 4px;
-		width: 100%;
-		height: 4px;
+	.active {
 		background-color: theme('colors.primary.500');
+	}
+
+	.noTransition {
+		transition: none !important;
 	}
 </style>
