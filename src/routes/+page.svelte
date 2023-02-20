@@ -1,5 +1,5 @@
 <script>
-	import { Header, Services } from '$lib/blocks/home';
+	import { About, Header, Services } from '$lib/blocks/home';
 
 	export let data;
 </script>
@@ -13,4 +13,4 @@
 
 <Services data={data.services} />
 
-<div class="pb-[1000px]" />
+<About data={data.about} />
