@@ -50,5 +50,33 @@ load = () => {
 				},
 			],
 		},
+		about: {
+			title: 'About Us',
+			description:
+				"Welcome to Sandbar Mechanical! We have over 23 years of experience as a trusted HVAC company in Hemet, CA, and we're here to handle all of your HVAC, refrigeration, and general contracting needs. Our team of experts is highly qualified and dedicated to delivering quality solutions at competitive prices. We've been serving commercial properties in the area for years, including restaurants, and we're proud of the reputation we've built for providing excellent service and reliable results.",
+			image: {
+				path: 'home/truck.webp',
+				alt: 'One of Sandbar Mechanical Service Trucks',
+				dev: true,
+			},
+			stats: [
+				{
+					title: '23+',
+					description: 'Years of Experience',
+				},
+				{
+					title: '150+',
+					description: 'Customers',
+				},
+				{
+					title: '200+',
+					description: 'Projects',
+				},
+			],
+			button: {
+				title: 'About Sandbar',
+				href: '/about',
+			},
+		},
 	};
 };
