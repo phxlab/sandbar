@@ -5,7 +5,7 @@
 	const { title, description, image, stats, button } = data;
 </script>
 
-<Container class="flex flex-col items-center justify-center py-20 md:flex-row">
+<Container class="my-20 flex flex-col items-center justify-center md:flex-row">
 	<img
 		class="mb-10 shrink-0 rounded-2xl object-cover md:mr-10 md:w-[400px] lg:mr-28 xl:w-[500px] 2xl:h-[650px] 2xl:w-[620px]"
 		src={imageHandler(image.path, image.dev)}
