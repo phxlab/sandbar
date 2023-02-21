@@ -78,5 +78,65 @@ load = () => {
 				href: '/about',
 			},
 		},
+		faqs: {
+			title: 'Frequently Asked Questions',
+			image: {
+				path: 'home/refrigeration.webp',
+				alt: 'Refrigeration Unit',
+				dev: true,
+			},
+			items: [
+				{
+					question: 'What services do you offer?',
+					answer:
+						'We offer a range of commercial-only services, including HVAC, refrigeration, kitchen equipment, plumbing, flooring, and electrical services. We provide repair, maintenance, replacement, and installation services for each of these areas.',
+				},
+				{
+					question: 'Are you only available for commercial properties?',
+					answer:
+						'Yes, we specialize in serving commercial properties, including restaurants and other businesses.',
+				},
+				{
+					question: 'What type of HVAC services do you provide?',
+					answer:
+						'We provide a full range of HVAC services, including installation, maintenance, repair, and replacement. Our services cover all types of commercial HVAC systems.',
+				},
+				{
+					question: 'Do you offer kitchen equipment repair services?',
+					answer:
+						'Yes, we offer repair and maintenance services for a range of commercial kitchen equipment, including ovens, fryers, refrigerators, and more.',
+				},
+				{
+					question: 'Do you provide emergency services?',
+					answer:
+						'Yes, we offer emergency repair services for all our commercial services, including HVAC, refrigeration, kitchen equipment, plumbing, flooring, and electrical systems.',
+				},
+				{
+					question: 'What is included in the maintenance services you offer?',
+					answer:
+						'Our maintenance services include regular inspections, cleaning, and testing of all commercial systems, as well as preventative measures to ensure efficient and safe operation.',
+				},
+				{
+					question: 'Do you offer installation services for flooring and electrical systems?',
+					answer:
+						'Yes, we offer installation services for a range of commercial flooring and electrical systems. Our experienced team can help you select the best options for your needs and budget.',
+				},
+				{
+					question: 'How do you ensure the quality of your services?',
+					answer:
+						'We are committed to providing the highest quality services to our commercial clients. We have a team of experienced technicians and use the best tools and techniques available to ensure the best results.',
+				},
+				{
+					question: 'Do you offer competitive pricing?',
+					answer:
+						'Yes, we offer competitive pricing for all our commercial services. We strive to provide the best value for our clients.',
+				},
+				{
+					question: 'What sets you apart from other HVAC companies in the area?',
+					answer:
+						'We have over 23 years of experience serving commercial clients in the area, and we are committed to providing the highest quality services and customer satisfaction. Our team of experienced technicians can handle all your commercial needs, from installation to maintenance and repair.',
+				},
+			],
+		},
 	};
 };
