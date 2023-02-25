@@ -138,5 +138,10 @@ load = () => {
 				},
 			],
 		},
+		contact: {
+			background: {
+				path: 'backgrounds/contact-bg.webp',
+			},
+		},
 	};
 };
