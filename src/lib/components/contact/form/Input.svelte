@@ -4,7 +4,7 @@
 	export let name = '';
 </script>
 
-<div class="mb-7">
+<div class="mb-7 w-full">
 	<label for={name}>
 		{label}
 	</label>
