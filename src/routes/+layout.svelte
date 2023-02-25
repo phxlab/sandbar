@@ -1,6 +1,11 @@
 <script>
 	import '../app.css';
-	import { Navigation } from '$lib';
+	import { contactStore, hoursStore, Navigation } from '$lib';
+
+	export let data;
+
+	contactStore.set(data.contact);
+	hoursStore.set(data.hours);
 </script>
 
 <Navigation />
