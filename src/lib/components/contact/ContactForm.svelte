@@ -2,10 +2,9 @@
 	import Input from './form/Input.svelte';
 	import Select from './form/Select.svelte';
 	import { services, times } from './form/options.js';
-	import { Button } from '$lib';
 </script>
 
-<div class="w-full p-4 lg:px-10 lg:py-7">
+<div class="lg-py-14 w-full p-4 lg:p-14 xl:py-20">
 	<h3 class="mb-7">Contact Form</h3>
 	<div class="md:flex md:gap-5">
 		<Input name="firstName" label="First Name" />
@@ -24,11 +23,9 @@
 		<textarea
 			name="message"
 			id="message"
-			class="min-h-24 mt-2 block h-24 w-full resize-y border-b border-grey-300 px-2 py-2 active:border-primary-500"
+			class="min-h-24 mt-2 block h-24 w-full resize-none border-b border-grey-300 px-2 py-2 active:border-primary-500"
 			placeholder="Message"
 		/>
 	</div>
-	<div class="mt-7">
-		<Button>Submit</Button>
-	</div>
+	<button class="mt-7 w-full rounded-2xl bg-primary-500 p-5 text-grey-100">Submit</button>
 </div>

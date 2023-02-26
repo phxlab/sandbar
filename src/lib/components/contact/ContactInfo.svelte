@@ -3,7 +3,7 @@
 </script>
 
 <div
-	class="rounded-br-2xl rounded-bl-2xl bg-primary-500 p-4 md:py-10 lg:rounded-bl-none lg:rounded-tr-2xl lg:pr-14"
+	class="flex shrink-0 flex-col justify-center rounded-br-2xl rounded-bl-2xl bg-primary-500 p-4 md:py-10 lg:rounded-bl-none lg:rounded-tr-2xl lg:p-14 xl:p-20"
 >
 	<h4 class="mb-7 text-grey-100">Contact Info</h4>
 	{#each $contactStore as info}
@@ -15,7 +15,7 @@
 		</div>
 	{/each}
 
-	<hr class="border-t-primary-600" />
+	<hr class="my-5 border-t-primary-600 lg:my-10" />
 
 	<!-- Hours -->
 	<div>
