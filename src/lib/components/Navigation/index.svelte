@@ -9,7 +9,7 @@
 		{ href: '/about', title: 'About' },
 		{ href: '/services', title: 'Services' },
 		{ href: '/projects', title: 'Projects' },
-		{ href: '/contact', title: 'Contact' },
+		{ href: '/Contact', title: 'Contact' },
 	];
 
 	// Bindings

@@ -21,7 +21,7 @@ load = () => {
 				},
 				{
 					title: 'Contact',
-					href: '/contact',
+					href: '/Contact',
 				},
 			],
 		},

@@ -1,12 +1,13 @@
 // Components
-export { default as Navigation } from './components/navigation/index.svelte';
-export { default as Container } from './components/container/index.svelte';
-export { default as Header } from './components/header/index.svelte';
-export { default as Button } from './components/button/index.svelte';
-export { default as ServiceCards } from './components/service-cards/index.svelte';
-export { default as Faqs } from './components/faqs/index.svelte';
-export { default as Contact } from './components/contact/index.svelte';
-export { default as Footer } from './components/footer/index.svelte';
+export { default as Navigation } from './components/Navigation/index.svelte';
+export { default as Container } from './components/Container/index.svelte';
+export { default as Header } from './components/Header/index.svelte';
+export { default as Button } from './components/Button/index.svelte';
+export { default as ServiceCards } from './components/ServiceCards/index.svelte';
+export { default as Faqs } from './components/Faqs/index.svelte';
+export { default as Contact } from './components/Contact/index.svelte';
+export { default as Footer } from './components/Footer/index.svelte';
+export { default as ContactSection } from './components/ContactSection/index.svelte';
 
 // Utils
 export { default as imageHandler } from './utils/imageHandler';

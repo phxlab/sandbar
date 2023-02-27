@@ -1,7 +1,9 @@
 <script>
-	import { About, Header, Services } from '$lib/blocks/home';
-	import Faqs from '$lib/blocks/home/Faqs.svelte';
-	import { Contact } from '$lib/blocks/core';
+	import { ContactSection } from '$lib';
+	import Faqs from './Faqs.svelte';
+	import Header from './Header.svelte';
+	import About from './About.svelte';
+	import Services from './Services.svelte';
 
 	export let data;
 </script>
@@ -19,4 +21,4 @@
 
 <Faqs data={data.faqs} />
 
-<Contact data={data.contact} />
+<ContactSection data={data.contact} />

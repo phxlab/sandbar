@@ -12,7 +12,7 @@ load = () => {
 			description: 'Expert solutions for all your commercial facilities needs',
 			button: {
 				title: 'Request A Quote',
-				href: '/contact',
+				href: '/Contact',
 			},
 		},
 		services: {
