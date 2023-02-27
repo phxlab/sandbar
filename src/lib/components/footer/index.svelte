@@ -7,13 +7,18 @@
 </script>
 
 <div class="bg-primary-800">
-	<Container class="pt-20">
+	<Container class="flex flex-col items-start pt-20 lg:flex-row lg:justify-between">
 		<!-- Info -->
-		<div class="flex flex-col items-center">
+		<div class="flex w-full flex-col items-center lg:mr-20 lg:w-1/2">
 			<img class="w-40" src={imageHandler(info.logo)} alt="Sandbar Mechanical Logo" />
-			<p class="mb-9 mt-4 text-center">
+			<p class="mb-4 mt-4 text-center">
 				{info.tagline}
 			</p>
+
+			<p class="mb-7">
+				<a href="/privacy">Privacy Policy</a> | <a href="terms">Terms & Conditions</a>
+			</p>
+
 			<div class="flex justify-center gap-7">
 				{#each info.social as social}
 					<Icon data={social} />
@@ -22,7 +27,7 @@
 		</div>
 
 		<!-- Links -->
-		<div class="mb-10 mt-20 flex flex-wrap justify-between gap-14">
+		<div class="mb-10 mt-20 flex w-full flex-wrap justify-between gap-14 lg:mt-0">
 			<!-- Quick Links -->
 			<div>
 				<h4 class="mb-7">Quick Links</h4>
@@ -59,15 +64,12 @@
 	</Container>
 	<div class="bg-primary-900 py-4">
 		<Container class="text-center">
-			<p>© Copyright 2023 Sandbar Mechanical</p>
-			<p class="mt-2">
-				<a href="/privacy">Privacy Policy</a> | <a href="terms">Terms & Conditions</a>
-			</p>
-			<div class="mt-4">
+			<div class="md:flex md:justify-between">
+				<p>© Copyright 2023 Sandbar Mechanical</p>
 				<a
 					rel="noreferrer"
 					target="_blank"
-					class="cursor-default"
+					class="mt-4 cursor-default md:m-0"
 					href="https://phoenixtechlab.com"
 				>
 					Web Design By <span class="cursor-pointer underline">Phoenix Tech Lab</span>
