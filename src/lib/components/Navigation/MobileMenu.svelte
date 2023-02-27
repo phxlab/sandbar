@@ -1,12 +1,19 @@
 <script>
 	import { page } from '$app/stores';
-	import { navigationStore } from '$lib';
+	import { navigationStore, scrollLock } from '$lib';
 
 	export let open;
 
 	const toggleMobileNav = () => {
 		open = false;
 	};
+
+	const toggleScrollLock = () => {
+		scrollLock.set(!$scrollLock);
+		console.log('Scroll Lock: ' + $scrollLock);
+	};
+
+	$: open, toggleScrollLock();
 </script>
 
 <div class="nav absolute z-30 w-full bg-primary-500">
@@ -30,9 +37,5 @@
 		height: calc(100vh - 56px);
 		top: 56px;
 		left: 0;
-	}
-
-	:global(html) {
-		overflow: hidden;
 	}
 </style>

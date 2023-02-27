@@ -4,3 +4,5 @@ export const contactStore = writable({});
 export const hoursStore = writable({});
 export const navigationStore = writable({});
 export const servicesStore = writable({});
+
+export const scrollLock = writable(false);

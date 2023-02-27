@@ -13,4 +13,4 @@ export { default as ContactSection } from './components/ContactSection/index.sve
 export { default as imageHandler } from './utils/imageHandler';
 
 // Stores
-export { contactStore, hoursStore, navigationStore, servicesStore } from './stores';
+export { contactStore, hoursStore, navigationStore, servicesStore, scrollLock } from './stores';
