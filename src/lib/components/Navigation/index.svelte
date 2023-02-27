@@ -3,6 +3,7 @@
 	import { page } from '$app/stores';
 	import { Container, imageHandler } from '$lib';
 	import { onMount } from 'svelte';
+	import MobileMenu from '$lib/components/Navigation/MobileMenu.svelte';
 
 	const links = [
 		{ href: '/', title: 'Home' },
@@ -22,7 +23,7 @@
 
 	// Sate
 	let resize = false;
-	let open;
+	let open = false;
 
 	const handleResize = () => {
 		resize = true;
@@ -115,6 +116,9 @@
 				border-radius: 4px;
 			`}
 		/>
+		{#if open}
+			<MobileMenu bind:open />
+		{/if}
 	</Container>
 </nav>
 
